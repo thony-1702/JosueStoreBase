@@ -1,0 +1,192 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Camiseta Ecudor Amarilla",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL", "XXL"],
+      "stock": {
+        "S": 5,
+        "M": 12,
+        "L": 8,
+        "XL": 3,
+        "XXL": 1
+      },
+      "imagen": "assets/images/Camiseta-Ecuador-Amarilla.png",
+      "descripcion": "Camiseta amarilla oficial de la seleccion ecuatoriana.",
+      "destacado": true
+    },
+    {
+      "id": 2,
+      "nombre": "Camiseta Ecudor Azul",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 5,
+        "M": 12,
+        "L": 8,
+        "XL": 3
+      },
+      "imagen": "assets/images/Camiseta-Ecuador-Azul.png",
+      "descripcion": "Camiseta azul oficial de la seleccion ecuatoriana.",
+      "destacado": true
+    },
+    {
+      "id": 3,
+      "nombre": "Camiseta Ronlado de Portugal",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 5,
+        "M": 12,
+        "L": 8,
+        "XL": 3
+      },
+      "imagen": "assets/images/Camiseta-Ronaldo-Portugal.png",
+      "descripcion": "Camiseta azul oficial de Ronaldo de la seleccion Portugal.",
+      "destacado": true
+    },
+    {
+      "id": 4,
+      "nombre": "Camiseta Neymar JR de Brasil",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 5,
+        "M": 12,
+        "L": 8,
+        "XL": 3
+      },
+      "imagen": "assets/images/Camiseta-Neymar-Jr-Brasil.png",
+      "descripcion": "Camiseta oficial de Neymar JR de la seleccion Brasil.",
+      "destacado": false
+    },
+    {
+      "id": 5,
+      "nombre": "Camiseta Lamine Yamal de la Seleccion de España",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 2,
+        "M": 4,
+        "L": 6,
+        "XL": 3
+      },
+      "imagen": "assets/images/Camiseta-Lamine-Yamal-Espana.png",
+      "descripcion": "Camiseta oficial de Lamine Yamal de la seleccion de España.",
+      "destacado": true
+    },
+    {
+      "id": 6,
+      "nombre": "Camiseta Mbappe de la Seleccion de Francia",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 3,
+        "M": 5,
+        "L": 4,
+        "XL": 2
+      },
+      "imagen": "assets/images/Camiseta-Mbappe-Francia.png",
+      "descripcion": "Camiseta oficial de Kylian Mbappe de la seleccion de Francia.",
+      "destacado": false
+    },
+    {
+      "id": 7,
+      "nombre": "Camiseta Messi de la Seleccion Argentina",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 12,
+        "M": 15,
+        "L": 10,
+        "XL": 8
+      },
+      "imagen": "assets/images/Camiseta-Messi-Argentina.png",
+      "descripcion": "Camiseta oficial de Lionel Messi de la seleccion de Argentina.",
+      "destacado": false
+    },
+    {
+      "id": 8,
+      "nombre": "Camiseta Blanca Liga Deportiva Universitaria",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 8,
+        "M": 12,
+        "L": 10,
+        "XL": 4
+      },
+      "imagen": "assets/images/Camiseta-Blanca-Liga-Deportiva-Universitaria.png",
+      "descripcion": "Camiseta Blanca oficial del equipo Liga Deportiva Universitaria de Quito.",
+      "destacado": true
+    },
+    {
+      "id": 9,
+      "nombre": "Camiseta Negra Liga Deportiva Universitaria",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 8,
+        "M": 12,
+        "L": 10,
+        "XL": 4
+      },
+      "imagen": "assets/images/Camiseta-Negra-Liga-Deportiva-Universitaria.png",
+      "descripcion": "Camiseta Blanca oficial del equipo Liga Deportiva Universitaria de Quito.",
+      "destacado": true
+    },
+    {
+      "id": 10,
+      "nombre": "Camiseta Messi de la Seleccion FC Barcelona",
+      "categoria": "Camisetas",
+      "subcategoria": "Futbol",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 8,
+        "M": 12,
+        "L": 10,
+        "XL": 4
+      },
+      "imagen": "assets/images/Camiseta-Messi-FCB.png",
+      "descripcion": "Camiseta oficial de Lionel Messi de la seleccion de FC Barcelona.",
+      "destacado": true
+    },
+    {
+      "id": 11,
+      "nombre": "Camiseta Blanca Escuderia RedBull",
+      "categoria": "Camisetas",
+      "subcategoria": "Formula 1",
+      "precio": 25.99,
+      "tallas": ["S", "M", "L", "XL"],
+      "stock": {
+        "S": 8,
+        "M": 12,
+        "L": 10,
+        "XL": 4
+      },
+      "imagen": "assets/images/Camiseta-Blanca-Escuderia-RedBull.png",
+      "descripcion": "Camiseta Blanca oficial de la Escuderia RedBull.",
+      "destacado": true
+    }
+  ]
+}

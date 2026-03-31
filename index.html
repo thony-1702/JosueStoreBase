@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Josué Store | Tienda Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuentes de Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Josué Store</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="active">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar productos..." aria-label="Buscar">
+                    <button id="searchBtn" aria-label="Buscar">🔍</button>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    🛒 <span id="cartCount">0</span>
+                </div>
+                <div class="menu-toggle" id="menuToggle">☰</div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner principal -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Moda y Estilo para Todos</h2>
+                <p>Descubre nuestra colección de ropa, calzado y accesorios con los mejores precios.</p>
+                <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+            </div>
+        </section>
+
+        <!-- Categorías destacadas -->
+        <section class="categories">
+            <h2>Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-categoria="ropa">
+                    <img src="https://via.placeholder.com/300x200?text=Ropa" alt="Ropa">
+                    <h3>Ropa</h3>
+                </div>
+                <div class="category-card" data-categoria="calzado">
+                    <img src="https://via.placeholder.com/300x200?text=Calzado" alt="Calzado">
+                    <h3>Calzado</h3>
+                </div>
+                <div class="category-card" data-categoria="accesorios">
+                    <img src="https://via.placeholder.com/300x200?text=Accesorios" alt="Accesorios">
+                    <h3>Accesorios</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo de productos con filtros -->
+        <section id="catalogo" class="catalogo">
+            <h2>Nuestros Productos</h2>
+            <div class="filtros-container">
+                <div class="filtro-grupo">
+                    <label for="filtroCategoria">Categoría:</label>
+                    <select id="filtroCategoria">
+                        <option value="todos">Todos</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="calzado">Calzado</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                </div>
+                <div class="filtro-grupo">
+                    <label for="filtroTalla">Talla:</label>
+                    <select id="filtroTalla">
+                        <option value="todos">Todas</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                    </select>
+                </div>
+                <div class="filtro-grupo">
+                    <label>
+                        <input type="checkbox" id="filtroStock"> Solo disponibles
+                    </label>
+                </div>
+                <button id="aplicarFiltros" class="btn-filtrar">Aplicar filtros</button>
+                <button id="limpiarFiltros" class="btn-limpiar">Limpiar</button>
+            </div>
+
+            <div class="productos-grid" id="productosContainer">
+                <!-- Productos cargados dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal del carrito -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <div class="cart-actions">
+                <!--<button id="vaciarCarrito" class="btn-secondary">Vaciar carrito</button>-->
+                <button id="procederCompra" class="btn-primary">Proceder a compra</button>
+            </div>
+            <p class="cart-note">* Este es un simulador. La compra se coordinará por WhatsApp.</p>
+        </div>
+    </div>
+
+    <!-- Modal de detalle de producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content product-detail">
+            <div class="modal-header">
+                <h2>Detalle del Producto</h2>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="product-detail-container">
+                <div class="product-detail-image">
+                    <img id="detailImage" src="" alt="">
+                </div>
+                <div class="product-detail-info">
+                    <h3 id="detailName"></h3>
+                    <p id="detailPrice" class="price"></p>
+                    <p id="detailDescription" class="description"></p>
+                    <div class="detail-sizes">
+                        <label>Tallas disponibles:</label>
+                        <div id="detailSizes"></div>
+                    </div>
+                    <div class="detail-actions">
+                        <button id="detailAddToCart" class="btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para seleccionar talla -->
+    <div id="tallaModal" class="modal">
+        <div class="modal-content" style="max-width: 300px;">
+            <div class="modal-header">
+                <h3>Selecciona talla</h3>
+                <button class="close-modal-btn" id="closeTallaModal">&times;</button>
+            </div>
+            <div id="tallaOpciones" style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;"></div>
+            <button id="confirmarTalla" class="btn-primary">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de compra (simulador WhatsApp) -->
+    <div id="confirmacionModal" class="modal">
+        <div class="modal-content confirmacion-content">
+            <div class="modal-header">
+                <h2>¡Gracias por tu compra!</h2>
+                <button class="close-modal-btn close-confirmacion">&times;</button>
+            </div>
+            <div class="confirmacion-body">
+                <div class="whatsapp-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60">
+                </div>
+                <p>Realiza una captura de pantalla de tu carrito de compra y ponte en contacto a través de WhatsApp al
+                    siguiente número:</p>
+                <p class="whatsapp-number">
+                    <a href="https://wa.me/593991234567?text=Hola,%20quiero%20realizar%20una%20compra" target="_blank"
+                        style="text-decoration: none; color: #25D366;">+593 99 123 4567</a>
+                </p>
+                <p class="nota">* Este es un simulador. La compra se coordinará manualmente.</p>
+                <button id="cerrarConfirmacion" class="btn-primary">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Josué Store</h3>
+                <p>📍 Cayambe, Ecuador</p>
+                <p>📞 +593 99 123 4567</p>
+                <p>✉️ contacto@josuestore.com</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
+                <a href="#">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Josué Store - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
