@@ -708,6 +708,11 @@ footer {
     color: #777;
     margin-top: 20px;
 }
+.category-card-img {
+    width: 100%;
+    height: 20px;
+    object-fit: cover;
+}
 
 #cerrarConfirmacion {
     margin-top: 20px;

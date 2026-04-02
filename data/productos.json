@@ -2,7 +2,7 @@
   "productos": [
     {
       "id": 1,
-      "nombre": "Camiseta Ecudor Amarilla",
+      "nombre": "Camiseta Ecuador Amarilla",
       "categoria": "Camisetas",
       "subcategoria": "Futbol",
       "precio": 25.99,
@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "nombre": "Camiseta Ecudor Azul",
+      "nombre": "Camiseta Ecuador Azul",
       "categoria": "Camisetas",
       "subcategoria": "Futbol",
       "precio": 25.99,
