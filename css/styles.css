@@ -137,7 +137,7 @@ h1, h2, h3, h4 {
 
 /* Hero */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1600x600?text=Josué+Store');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/Fondo-Banner-principal.jpeg');
     background-size: cover;
     background-position: center;
     height: 400px;
